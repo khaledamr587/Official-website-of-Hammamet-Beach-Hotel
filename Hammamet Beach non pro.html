@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Vibes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Monsieur+La+Doulaise&display=swap');
+
+    :root {
+      --sand-beige: #F2E9D8;
+      --ocean-teal: #2BAF9B;
+      --deep-sea: #166A8F;
+      --white-foam: #FFFFFF;
+      --blue-one: #2a7da5;
+      --blue-two: #3bace2;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    
+
+    .pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 200;
+      font-style: normal;
+    }
+
+    
+
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--sand-beige);
+      color: var(--deep-sea);
+      line-height: 1.6;
+    }
+
+    /* Hero header */
+    .hero-header {
+  position: relative;
+  width: 100%;
+      height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+    
+    /* Gradient overlay for better text readability */
+    .hero-header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(22, 106, 143, 0.4) 0%, rgba(42, 125, 165, 0.3) 100%);
+      z-index: 0;
+    }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transform: scale(1.1); /* Parallax effect */
+      transition: transform 0.3s ease;
+    }
+    
+    .hero-header:hover .bg-video {
+      transform: scale(1.05);
+}
+
+.hero-content {
+      position: relative;
+  z-index: 1;
+      width: 100%;
+    }
+    
+    /* Fade-in animations */
+    .hero-header > div {
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .hero-header p:first-of-type {
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .hero-header h1 {
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+    
+    .hero-header p:last-of-type {
+      animation: fadeInUp 1s ease-out 0.6s both;
+    }
+    
+    .hero-cta {
+      animation: fadeInUp 1s ease-out 0.8s both;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-header h1 {
+      font-family: 'Cormorant', serif;
+      font-weight: 700;
+      font-size: 120px;
+  line-height: 1.1;  
+      text-align: center;
+      letter-spacing: 3px;
+      margin-top: 50px;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ffffff;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-header p:first-of-type {
+      letter-spacing: 2px;
+      margin-top: 50px;
+    }
+    
+    .hero-header p:last-of-type {
+      margin-top: 20px;
+    }
+    
+    /* CTA Button */
+    .hero-cta {
+      margin-top: 2rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, var(--ocean-teal) 0%, var(--blue-two) 100%);
+      color: var(--white-foam);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(43, 175, 155, 0.4);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .cta-button:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(43, 175, 155, 0.6);
+    }
+    
+    .cta-button span {
+      position: relative;
+      z-index: 1;
+    }
+    Home Page Room Section 
+-------------------------*/
+
+.hp-room-section {
+	background: #FFFFFF;
+	padding: 100px 0;
+}
+
+.hp-room-items {
+	overflow: hidden;
+}
+
+.hp-room-items .rooms-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0;
+	margin-top: 3rem;
+}
+
+.hp-room-items .hp-room-item {
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	background-color: var(--deep-sea);
+}
+
+.hp-room-items .hp-room-item.set-bg {
+	background-size: cover;
+	background-position: center;
+}
+
+.hp-room-items .hp-room-item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+	z-index: 1;
+	transition: opacity 0.5s ease;
+}
+
+.hp-room-items .hp-room-item:hover::before {
+	opacity: 0.9;
+}
+
+.hp-room-items .hp-room-item:hover .hr-text {
+	bottom: 135px;
+}
+
+.hp-room-items .hp-room-item:hover .hr-text h2 {
+	margin-bottom: 30px;
+}
+
+.hp-room-items .hp-room-item .hr-text {
+	position: absolute;
+	left: 45px;
+	right: 25px;
+	bottom: -250px;
+	z-index: 2;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.hp-room-items .hp-room-item .hr-text h3 {
+	color: #ffffff;
+	margin-bottom: 15px;
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.hp-room-items .hp-room-item .hr-text h2 {
+	color: #ffffff;
+	font-weight: 700;
+	margin-bottom: 50px;
+	font-size: 36px;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.hp-room-items .hp-room-item .hr-text h2 span {
+	font-family: "Cabin", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.hp-room-items .hp-room-item .hr-text .room-features {
+	list-style: none;
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+.hp-room-items .hp-room-item .hr-text .room-features li {
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 36px;
+	display: flex;
+	align-items: center;
+}
+
+.hp-room-items .hp-room-item .hr-text .room-features li i,
+.hp-room-items .hp-room-item .hr-text .room-features li svg {
+	color: #ffffff;
+	margin-right: 12px;
+	width: 20px;
+	height: 20px;
+}
+
+.hp-room-items .hp-room-item .hr-text .primary-btn {
+	color: #ffffff;
+	border-color: #ffffff;
+}
+
+.hp-room-items .hp-room-item .hr-text .primary-btn:hover {
+	color: var(--deep-sea);
+	background: #ffffff;
+}
+
+.hp-room-items .hp-room-item .hr-text .primary-btn::before {
+	background: #ffffff;
+}
+
+@media (max-width: 1024px) {
+	.hp-room-items .rooms-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.hp-room-items .rooms-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.hp-room-items .hp-room-item {
+		height: 500px;
+		margin-bottom: 2rem;
+	}
+	
+	.hp-room-items .hp-room-item .hr-text {
+		left: 25px;
+		right: 25px;
+	}
+}
+    
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: bounce 2s infinite;
+    }
+    
+    .scroll-indicator i {
+      font-size: 2rem;
+      color: var(--white-foam);
+      opacity: 0.8;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+
+    section {
+      padding: 6rem 8%;
+    }
+    
+    /* Increased spacing for better breathing room */
+    .section-spacing {
+      margin-bottom: 4rem;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .intro h2 {
+      color: var(--ocean-teal);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* About Us Section */
+    .aboutus-section {
+      background: var(--white-foam);
+      padding: 100px 0;
+    }
+    
+    .about-text {
+      padding: 0 35px;
+      text-align: center;
+      font-family: "Cabin", sans-serif;
+    }
+    
+    .section-title {
+      text-align: center;
+    }
+    
+    .about-text p {
+      color: var(--deep-sea);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 0 15px 0;
+      font-family: "Cabin", sans-serif;
+    }
+    
+    .about-text p.f-para {
+      margin-bottom: 10px;
+    }
+    
+    .about-text p.s-para {
+      margin-bottom: 35px;
+    }
+    
+    .section-title {
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    
+    .section-title span {
+      font-size: 14px;
+      color: #FFDDD2;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: "Cabin", sans-serif;
+    }
+    
+    .section-title h2 {
+      font-size: 44px;
+      color: var(--deep-sea);
+      line-height: 58px;
+      margin-top: 10px;
+      font-family: "Lora", serif;
+      font-weight: 400;
+    }
+    
+    .primary-btn {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--deep-sea);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      position: relative;
+      padding: 12px 30px;
+      background: transparent;
+      border: 2px solid var(--ocean-teal);
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-family: "Cabin", sans-serif;
+      overflow: hidden;
+    }
+    
+    .primary-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--ocean-teal) 0%, var(--blue-two) 100%);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .primary-btn:after {
+      display: none;
+    }
+
+    .primary-btn:hover {
+      color: var(--white-foam);
+      border-color: var(--ocean-teal);
+    }
+    
+    .primary-btn:hover::before {
+      left: 0;
+    }
+    
+    /* Ripple effect */
+    .primary-btn,
+    .cta-button {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+      transform: scale(0);
+      animation: ripple-animation 0.6s ease-out;
+      pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    
+    /* Urgency indicators */
+    .urgency-badge {
+      display: inline-block;
+      padding: 5px 12px;
+      background: var(--ocean-teal);
+      color: var(--white-foam);
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 15px;
+      margin-left: 10px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+    
+    .about-pic img {
+      min-width: 100%;
+      border-radius: 5px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--white-foam);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(22, 106, 143, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(43, 175, 155, 0.05) 0%, rgba(42, 125, 165, 0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(22, 106, 143, 0.2);
+    }
+    
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card h3 {
+      color: #FFDDD2;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Glass-morphism effect */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      cursor: pointer;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(22, 106, 143, 0.7) 0%, rgba(43, 175, 155, 0.7) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 18px;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-overlay i {
+      color: var(--white-foam);
+      font-size: 2rem;
+    }
+    
+    /* Lightbox Modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    
+    .lightbox.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+    }
+    
+    .lightbox-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: var(--white-foam);
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    .lightbox-close:hover {
+      transform: rotate(90deg);
+    }
+    
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white-foam);
+      border: none;
+      padding: 15px 20px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    
+    .lightbox-nav:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .lightbox-prev {
+      left: 20px;
+    }
+    
+    .lightbox-next {
+      right: 20px;
+    }
+    
+    /* Gallery Filter Tabs */
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+      padding: 10px 25px;
+      background: transparent;
+      border: 2px solid var(--ocean-teal);
+      color: var(--ocean-teal);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--ocean-teal);
+      color: var(--white-foam);
+    }
+    
+    /* Rooms Section */
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .room-card {
+      background: var(--white-foam);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(22, 106, 143, 0.12);
+      transition: transform 0.3s ease;
+    }
+    
+    .room-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .room-image {
+      width: 100%;
+      height: 250px;
+      background: var(--sand-beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--deep-sea);
+    }
+    
+    .room-content {
+      padding: 2rem;
+    }
+    
+    .room-content h3 {
+      color: var(--deep-sea);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .room-features {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    
+    .room-features li {
+      padding: 0.5rem 0;
+      color: var(--deep-sea);
+    }
+    
+    .room-features li i {
+      color: var(--ocean-teal);
+      margin-right: 8px;
+    }
+    
+    .room-price {
+      font-size: 1.2rem;
+      color: var(--deep-sea);
+      margin: 1.5rem 0;
+    }
+    
+    .room-price span {
+      color: var(--ocean-teal);
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    
+    /* Services Section */
+    .services-section {
+      padding: 4rem 8%;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .service-card {
+      background: var(--white-foam);
+      padding: 2rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(22, 106, 143, 0.12);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-icon {
+      font-size: 3rem;
+      color: var(--ocean-teal);
+      margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+      color: var(--deep-sea);
+      margin-bottom: 1rem;
+    }
+    
+    Testimonial Slider
+-----------------------*/
+
+.testimonial-section {
+	background: #f9f9f9;
+}
+.testimonial-section .section-title {
+	margin-bottom: 30px;
+}
+.testimonial-slider.owl-carousel .owl-item img {
+	width: auto;
+	margin: 0 auto;
+}
+.testimonial-slider.owl-carousel .owl-nav button {
+	height: 44px;
+	width: 44px;
+	border: 1px solid #ebebeb;
+	font-size: 24px;
+	color: #707079;
+	background: #ffffff;
+	line-height: 48px;
+	text-align: center;
+	border-radius: 50%;
+	position: absolute;
+	left: -190px;
+	top: 50%;
+	-webkit-transform: translateY(-6px);
+	-ms-transform: translateY(-6px);
+	transform: translateY(-6px);
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.testimonial-slider.owl-carousel .owl-nav button:hover {
+	border-color: #19191a;
+	color: #19191a;
+}
+.testimonial-slider.owl-carousel .owl-nav button.owl-next {
+	left: auto;
+	right: -190px;
+}
+.testimonial-slider .ts-item {
+	text-align: center;
+}
+.testimonial-slider .ts-item p {
+	font-size: 20px;
+	color: #707079;
+	line-height: 30px;
+	margin-bottom: 50px;
+}
+.testimonial-slider .ts-item .ti-author {
+	margin-bottom: 60px;
+}
+.testimonial-slider .ts-item .ti-author .rating {
+	display: inline-block;
+}
+.testimonial-slider .ts-item .ti-author .rating i {
+	color: #f5b917;
+	font-size: 16px;
+}
+.testimonial-slider .ts-item .ti-author h5 {
+	font-size: 20px;
+	color: #19191a;
+	display: inline-block;
+}
+    /* Contact Section */
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-item i {
+      font-size: 1.5rem;
+      color: var(--ocean-teal);
+      margin-right: 1rem;
+      margin-top: 0.25rem;
+    }
+    
+    .contact-item h4 {
+      color: var(--deep-sea);
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-form {
+      background: var(--white-foam);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(22, 106, 143, 0.12);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--sand-beige);
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--ocean-teal);
+    }
+    
+    .map-container {
+      margin-top: 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .footer-social a {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: var(--deep-sea);
+      transition: color 0.3s;
+    }
+    
+    .footer-social a:hover {
+      color: var(--ocean-teal);
+    }
+
+    footer {
+      background: var(--white-foam);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--deep-sea);
+    }
+
+    /* Mobile Hamburger Menu */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1000;
+    }
+    
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--deep-sea);
+      margin: 3px 0;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Loading Skeleton */
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+      border-radius: 8px;
+    }
+    
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+    
+    .skeleton-img {
+      width: 100%;
+      height: 260px;
+    }
+    
+    /* Tooltip */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: var(--deep-sea);
+      color: var(--white-foam);
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.85rem;
+    }
+    
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: var(--deep-sea) transparent transparent transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    /* Image Lazy Loading */
+    img[loading="lazy"] {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    img[loading="lazy"].loaded {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero-header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .menu-item {
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        padding: 0 4%;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .menu-item-bottom .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white-foam);
+        box-shadow: 0 10px 30px rgba(22, 106, 143, 0.2);
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      .menu-item-bottom .nav-menu.active {
+        display: flex;
+      }
+      
+      .menu-item-bottom .nav-menu .mainmenu {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .menu-item-bottom .nav-menu .mainmenu li {
+        width: 100%;
+        margin: 10px 0;
+      }
+      
+      .menu-item-bottom .nav-menu .mainmenu li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid var(--sand-beige);
+      }
+      
+      .sticky-book-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+      }
+      
+      .back-to-top {
+        bottom: 80px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+      }
+      
+      section {
+        padding: 3rem 5%;
+      }
+      
+      .aboutus-section > div > div {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .about-text {
+        text-align: center !important;
+        margin-bottom: 30px;
+        padding: 0 15px !important;
+      }
+      
+      .section-title {
+        text-align: center !important;
+      }
+      
+      .section-title h2 {
+        font-size: 30px !important;
+        line-height: 40px !important;
+      }
+      
+      .about-pic {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .about-pic img {
+        margin-bottom: 20px;
+      }
+    }
+
+    /*---------------------
+      Header / navbar
+    -----------------------*/
+
+    .header-section.header-normal .menu-item {
+      -webkit-box-shadow: 0px 12px 15px rgba(22,106,143,0.08);
+      box-shadow: 0px 12px 15px rgba(22,106,143,0.08);
+    }
+
+    /* Top nav styles now integrated into menu-item */
+
+    .menu-item-top .tn-left,
+    .menu-item-top .tn-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-item-top .tn-left ul,
+    .menu-item-top .tn-right ul {
+      list-style: none;
+    }
+
+    .menu-item-top .tn-left li {
+      list-style: none;
+      display: inline-block;
+      font-size: 16px;
+      color: #000000; 
+      font-weight: 500;
+      padding: 14px 0 12px;
+      margin-right: 64px;
+      position: relative;
+    }
+
+    .menu-item-top .tn-left li:after {
+      position: absolute;
+      right: -32px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: var(--sand-beige);
+      content: "";
+    }
+
+    .menu-item-top .tn-left li:last-child {
+      margin-right: 0;
+    }
+
+    .menu-item-top .tn-left li:last-child:after {
+      display: none;
+    }
+
+    .menu-item-top .tn-left li i {
+  color: var(--ocean-teal);
+  margin-right: 4px;
+}
+
+    .menu-item-top .tn-right {
+      text-align: right;
+    }
+
+    .menu-item-top .tn-right .top-social {
+      display: inline-block;
+      margin-right: 35px;
+      padding: 13px 0;
+    }
+
+    .menu-item-top .tn-right .top-social a {
+      display: inline-block;
+      font-size: 16px;
+      color: black;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    .menu-item-top .tn-right .top-social a:hover {
+      color: var(--ocean-teal);
+    }
+
+    .menu-item-top .tn-right .language-option {
+      display: inline-block;
+      margin-left: 30px;
+      cursor: pointer;
+      padding: 13px 0px 11px;
+      position: relative;
+    }
+
+    .menu-item-top .tn-right .language-option:hover .flag-dropdown {
+      top: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-item-top .tn-right .language-option img {
+      height: 26px;
+      width: 26px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .menu-item-top .tn-right .language-option span {
+      font-size: 16px;
+      color: var(--deep-sea);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown {
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 100px;
+      background: var(--white-foam);
+      display: block;
+      padding: 10px 15px;
+      -webkit-box-shadow: 0px 9px 10px rgba(22,106,143,0.15);
+      box-shadow: 0px 9px 10px rgba(22,106,143,0.15);
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      z-index: 99;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown ul li {
+      list-style: none;
+      text-align: left;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown ul li a {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--deep-sea);
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown ul li a:hover {
+      color: var(--ocean-teal);
+    }
+
+    .menu-item {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 0;
+      width: 100%;
+      box-shadow: 0 2px 20px rgba(22, 106, 143, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .menu-item.scrolled {
+      background: var(--white-foam);
+      box-shadow: 0 10px 40px rgba(22, 106, 143, 0.25);
+    }
+    
+    /* Active section indicator */
+    .menu-item .nav-menu .mainmenu li.active a {
+      color: var(--ocean-teal);
+      font-weight: 600;
+    }
+    
+    /* Sticky Book Now Button */
+    .sticky-book-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 998;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, var(--ocean-teal) 0%, var(--blue-two) 100%);
+      color: var(--white-foam);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(255, 127, 106, 0.4);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(100px);
+      pointer-events: none;
+    }
+    
+    .sticky-book-btn.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    
+    .sticky-book-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(255, 127, 106, 0.6);
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      z-index: 997;
+      width: 50px;
+      height: 50px;
+      background: var(--ocean-teal);
+      color: var(--white-foam);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(43, 175, 155, 0.3);
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      background: var(--deep-sea);
+      transform: translateY(-5px);
+    }
+
+    .menu-item-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8%;
+      border-bottom: 1px solid var(--sand-beige);
+    }
+    
+    .menu-item-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .menu-item .logo {
+      margin-left: 100px;
+    }
+
+    .menu-item .logo img {
+      width: 120px;
+      height: 60px;
+      display: block;
+      object-fit: contain;
+      background: var(--white-foam);
+      padding: 3px;
+      border-radius: 2px;
+    }
+
+    .menu-item .logo a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #3382a8;
+      text-decoration: none;
+    }
+
+    .menu-item .nav-menu {
+      text-align: center;
+      width: 100%;
+    }
+
+    .menu-item .nav-menu .mainmenu {
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .menu-item .nav-menu .mainmenu li {
+      list-style: none;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-item .nav-menu .mainmenu li.active a:after {
+      opacity: 1;
+    }
+
+    .menu-item .nav-menu .mainmenu li:hover > a:after {
+      opacity: 1;
+    }
+
+    .menu-item .nav-menu .mainmenu li:hover .dropdown {
+      top: 77px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-item .nav-menu .mainmenu li a {
+      font-size: 16px;
+      color: var(--deep-sea);
+      margin-right: 42px;
+      font-weight: 500;
+      display: inline-block;
+      padding: 27px 0;
+      position: relative;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .menu-item .nav-menu .mainmenu li a:after {
+      position: absolute;
+      left: 0;
+      top: 52px;
+      width: 100%;
+      height: 2px;
+      background: #FFDDD2;
+      content: "";
+      opacity: 0;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown {
+      position: absolute;
+      left: 0;
+      top: 97px;
+      width: 180px;
+      background: var(--white-foam);
+      z-index: 9;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-box-shadow: 0px 9px 15px rgba(22,106,143,0.08);
+      box-shadow: 0px 9px 15px rgba(22,106,143,0.08);
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li {
+      list-style: none;
+      display: block;
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li a {
+      font-size: 16px;
+      color: var(--deep-sea);
+      display: block;
+      text-align: left;
+      padding: 8px 15px;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li a:hover {
+      color: var(--ocean-teal);
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li a:after {
+      display: none;
+    }
+
+    .menu-item .nav-menu .nav-right {
+      display: inline-block;
+      margin-left: 43px;
+      padding: 27px 0px;
+    }
+
+    .menu-item .nav-menu .nav-right i {
+      font-size: 16px;
+      color: var(--deep-sea);
+      cursor: pointer;
+    }
+
+    .canvas-open {
+      display: none;
+    }
+
+    .offcanvas-menu-wrapper {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Merged Top bar and Main menu -->
+  <div class="menu-item">
+    <!-- Top section with contact info and social -->
+    <div class="menu-item-top">
+    <div class="tn-left">
+      <ul>
+        <li><i class="fa fa-phone" ></i> +216 234 567 890</li>
+          <li><i class="fa fa-envelope"></i> contact@hammametbeach.com</li>
+      </ul>
+    </div>
+
+    <div class="tn-right">
+      <div class="top-social">
+        <a href="https://www.facebook.com/HotelHammametBeach"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g23547400-d1094172-Reviews-Hammamet_Beach-Mrezga_Hammamet_Nabeul_Governorate.html"><i class="fa fa-tripadvisor"></i></a>
+          <a href="https://www.instagram.com/hotel_hammamet_beach"><i class="fa fa-instagram"></i></a>
+      </div>     
+      <div class="language-option">
+        <img src="flag.jpg" alt="">
+        <span>EN <i class="fa fa-angle-down"></i></span>
+        <div class="flag-dropdown">
+          <ul>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">FR</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Bottom section with navigation menu -->
+    <div class="menu-item-bottom">
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <div class="logo"> 
+        <a href="#home">
+        <img src="Logo.png" alt="Hammamet Beach logo">
+        </a>
+    </div>
+    <div class="nav-menu">
+      <ul class="mainmenu">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <a href="#gallery">Gallery</a>
+          <ul class="dropdown">
+            <li><a href="#gallery">Beach</a></li>
+            <li><a href="#gallery">Sunsets</a></li>
+          </ul>
+        </li>
+          <li><a href="#chambre">Chambres</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero-header" id="home">
+      <video autoplay muted loop class="bg-video">
+        <source src="waves.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    <div class="hero-content">
+      <p>Welcome To</p>
+      <h1>Hammamet Beach</h1>
+      <p>Sun, sea, and slow days. A place to relax, breathe, and enjoy the warmth.</p>
+      <div class="hero-cta">
+        <a href="#chambre" class="cta-button"><span>Book Your Stay</span></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <a href="#about"><i class="fa fa-chevron-down"></i></a>
+      </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section class="aboutus-section" id="about">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 8%;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="about-text">
+          <div class="section-title">
+            <span>About Us</span>
+            <h2>Hammamet Beach<br />Hotel & Resort</h2>
+      </div>
+          <p class="f-para">Welcome to Hammamet Beach, a leading destination for travelers seeking the perfect beachside escape. We're passionate about creating unforgettable experiences. Every day, we welcome guests from around the world, offering exceptional hospitality across our beautiful coastal property.</p>
+          <p class="s-para">So when it comes to booking the perfect hotel, vacation rental, resort, or beachfront accommodation, we've got you covered. Experience the warmth of the Mediterranean, the beauty of golden beaches, and the tranquility of gentle waves.</p>
+          <a href="#contact" class="primary-btn about-btn">Read More</a>
+      </div>
+        <div class="about-pic" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <!-- Images will be added here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- <section id="gallery">
+    <div class="section-title">
+      <span>Gallery</span>
+      <h2>Summer Moments</h2>
+    </div>
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="beach">Beach</button>
+      <button class="filter-btn" data-filter="rooms">Rooms</button>
+      <button class="filter-btn" data-filter="facilities">Facilities</button>
+    </div>
+    <div class="gallery">
+       Images will be added here 
+    </div>  
+  </section>  -->
+
+
+<!-- Rooms Section -->
+<section class="hp-room-section" id="chambre">
+  <div class="container-fluid" style="max-width: 1200px; margin: 0 auto; padding: 0 8%;">
+    <div class="section-title">
+      <span>DISCOVER</span>
+      <h2>Our Rooms & Suites</h2>
+    </div>
+    <div class="hp-room-items">
+      <div class="rooms-grid">
+        <div class="hp-room-item set-bg" style="background-image: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop');">
+          <div class="hr-text">
+            <h3>Standard Room</h3>
+            <h2>€99<span>/Night</span></h2>
+            <ul class="room-features">
+              <li><i class="fa fa-snowflake"></i> Air Conditioning</li>
+              <li><i class="fa fa-tv"></i> Flat Screen TV</li>
+              <li><i class="fa fa-bed"></i> King Beds</li>
+              <li>
+                <svg viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" style="width: 20px; height: 20px; vertical-align: middle;">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <defs>
+                      <style>.cls-1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;stroke-width:1.91px;}</style>
+                    </defs>
+                    <rect class="cls-1" x="2.45" y="13.91" width="19.09" height="8.59"></rect>
+                    <line class="cls-1" x1="23.45" y1="13.91" x2="0.55" y2="13.91"></line>
+                    <line class="cls-1" x1="7.23" y1="13.91" x2="7.23" y2="22.5"></line>
+                    <line class="cls-1" x1="12" y1="13.91" x2="12" y2="22.5"></line>
+                    <line class="cls-1" x1="16.77" y1="13.91" x2="16.77" y2="22.5"></line>
+                    <path class="cls-1" d="M6.27,12V7.23A5.73,5.73,0,0,1,12,1.5h0a5.73,5.73,0,0,1,5.73,5.73V12"></path>
+                    <line class="cls-1" x1="6.27" y1="8.18" x2="18.68" y2="8.18"></line>
+                    <line class="cls-1" x1="12" y1="1.5" x2="12" y2="12"></line>
+                  </g>
+                </svg>
+                Private Balcony
+              </li>
+            </ul>
+            <a href="#contact" class="primary-btn">More Details</a>
+          </div>
+        </div>
+        <div class="hp-room-item set-bg" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop');">
+          <div class="hr-text">
+            <h3>Sea View Room</h3>
+            <h2>€120<span>/Night</span></h2>
+            <ul class="room-features">
+              <li><i class="fa fa-wifi"></i> Free WiFi</li>
+              <li><i class="fa fa-eye"></i> Ocean View</li>
+              <li><i class="fa fa-coffee"></i> Mini Bar</li>
+              <li><i class="fa fa-bed"></i> King Beds</li>
+            </ul>
+            <a href="#contact" class="primary-btn">More Details</a>
+          </div>
+        </div>
+        <div class="hp-room-item set-bg" style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop');">
+          <div class="hr-text">
+            <h3>Deluxe Suite</h3>
+            <h2>€200<span>/Night</span></h2>
+            <ul class="room-features">
+              <li><i class="fa fa-wifi"></i> Free WiFi</li>
+              <li><i class="fa fa-bath"></i> Jacuzzi</li>
+              <li><i class="fa fa-star"></i> VIP Service</li>
+              <li><i class="fa fa-bed"></i> King Beds</li>
+            </ul>
+            <a href="#contact" class="primary-btn">More Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section" style="background: var(--white-foam);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-title">
+      <span>AMENITIES</span>
+      <h2>Hotel Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fa fa-cutlery service-icon"></i>
+        <h3>Restaurant & Bar</h3>
+        <p>Enjoy Mediterranean cuisine and fresh seafood with stunning ocean views.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-life-ring service-icon"></i>
+        <h3>Private Beach</h3>
+        <p>Exclusive access to pristine sandy beaches with complimentary sun loungers.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-tint service-icon"></i>
+        <h3>Swimming Pool</h3>
+        <p>Outdoor infinity pool overlooking the Mediterranean Sea.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-spa service-icon"></i>
+        <h3>Spa & Wellness</h3>
+        <p>Rejuvenate with traditional hammam and massage treatments.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-wifi service-icon"></i>
+        <h3>Free WiFi</h3>
+        <p>High-speed internet access throughout the hotel property.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-car service-icon"></i>
+        <h3>Free Parking</h3>
+        <p>Complimentary parking for all guests during their stay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Testimonial Section Begin -->
+ <section class="testimonial-section spad">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="section-title">
+                  <span>Testimonials</span>
+                  <h2>What Customers Say?</h2>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+              <div class="testimonial-slider owl-carousel">
+                  <div class="ts-item">
+                      <p>After a construction project took longer than expected, my husband, my daughter and I
+                          needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
+                          city, neighborhood and the types of housing options available and absolutely love our
+                          vacation at Sona Hotel.</p>
+                      <div class="ti-author">
+                          <div class="rating">
+                              <i class="icon_star"></i>
+                              <i class="icon_star"></i>
+                              <i class="icon_star"></i>
+                              <i class="icon_star"></i>
+                              <i class="icon_star-half_alt"></i>
+                          </div>
+                          <h5> - Alexander Vasquez</h5>
+                      </div>
+                      <img src="img/testimonial-logo.png" alt="">
+                  </div>
+                  <div class="ts-item">
+                      <p>After a construction project took longer than expected, my husband, my daughter and I
+                          needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
+                          city, neighborhood and the types of housing options available and absolutely love our
+                          vacation at Sona Hotel.</p>
+                      <div class="ti-author">
+                          <div class="rating">
+                              <i class="icon_star"></i>
+                              <i class="icon_star"></i>
+                              <i class="icon_star"></i>
+                              <i class="icon_star"></i>
+                              <i class="icon_star-half_alt"></i>
+                          </div>
+                          <h5> - Alexander Vasquez</h5>
+                      </div>
+                      <img src="img/testimonial-logo.png" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Testimonial Section End -->
+
+
+<!-- Contact Section -->
+<section id="contact" style="background: var(--white-foam);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-title">
+      <span>GET IN TOUCH</span>
+      <h2>Contact Us</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fa fa-map-marker"></i>
+          <div>
+            <h4>Address</h4>
+            <p>Mrezga, Hammamet 8050, Tunisia</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa fa-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+216 72 280 966</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>contact@hammametbeach.com</p>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.8156779847744!2d10.542662!3d36.389156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd61ed056e75f9%3A0x7e8e1e7e8e8e8e8e!2sHammamet%2C%20Tunisia!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="primary-btn">Send Message</button>
+        </form>
+        <div id="formMessage" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 5px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 0;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+      <div>
+        <h3 style="color: var(--ocean-teal); margin-bottom: 1rem;">Hammamet Beach</h3>
+        <p>Your perfect Mediterranean escape. Experience luxury, comfort, and the beauty of Tunisia's coastline.</p>
+      </div>
+      <div>
+        <h4 style="color: var(--ocean-teal); margin-bottom: 1rem;">Quick Links</h4>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 0.5rem;"><a href="#home" style="color: var(--deep-sea); text-decoration: none;">Home</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="#about" style="color: var(--deep-sea); text-decoration: none;">About</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="#chambre" style="color: var(--deep-sea); text-decoration: none;">Rooms</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="#contact" style="color: var(--deep-sea); text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: var(--ocean-teal); margin-bottom: 1rem;">Follow Us</h4>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/HotelHammametBeach"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.tripadvisor.com/Hotel_Review-g23547400-d1094172-Reviews-Hammamet_Beach-Mrezga_Hammamet_Nabeul_Governorate.html"><i class="fa fa-tripadvisor"></i></a>
+          <a href="https://www.instagram.com/hotel_hammamet_beach"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--sand-beige);">
+      © 2025 Hammamet Beach Hotel • Designed for relaxation and simplicity
+    </div>
+  </div>
+  </footer>
+
+  <!-- Sticky Book Now Button -->
+  <a href="#chambre" class="sticky-book-btn">Book Now <span class="urgency-badge">Only 3 left!</span></a>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-nav lightbox-prev">&#10094;</button>
+    <button class="lightbox-nav lightbox-next">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const menuItem = document.querySelector('.menu-item');
+      if (window.scrollY > 100) {
+        menuItem.classList.add('scrolled');
+      } else {
+        menuItem.classList.remove('scrolled');
+      }
+    });
+
+    // Sticky Book Now Button
+    const stickyBtn = document.querySelector('.sticky-book-btn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        stickyBtn.classList.add('visible');
+      } else {
+        stickyBtn.classList.remove('visible');
+      }
+    });
+
+    // Back to Top Button
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.menu-item-bottom .nav-menu');
+    
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+    }
+
+    // Active Section Indicator
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-menu .mainmenu li a');
+    
+    window.addEventListener('scroll', function() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.parentElement.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    });
+
+    // Ripple Effect on Buttons
+    document.querySelectorAll('.primary-btn, .cta-button, .sticky-book-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Gallery Lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item img, .gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    
+    let currentImageIndex = 0;
+    const images = Array.from(galleryItems);
+
+    galleryItems.forEach((img, index) => {
+      const galleryItem = img.closest('.gallery-item') || img.parentElement;
+      if (!galleryItem.querySelector('.gallery-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'gallery-overlay';
+        overlay.innerHTML = '<i class="fa fa-search-plus"></i>';
+        galleryItem.appendChild(overlay);
+      }
+      
+      galleryItem.style.cursor = 'pointer';
+      galleryItem.addEventListener('click', function() {
+        currentImageIndex = index;
+        openLightbox(img.src);
+      });
+    });
+
+    function openLightbox(src) {
+      if (lightboxImg && lightbox) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox() {
+      if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function showNextImage() {
+      if (images.length > 0) {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        if (lightboxImg) lightboxImg.src = images[currentImageIndex].src;
+      }
+    }
+
+    function showPrevImage() {
+      if (images.length > 0) {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        if (lightboxImg) lightboxImg.src = images[currentImageIndex].src;
+      }
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxNext) lightboxNext.addEventListener('click', showNextImage);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', showPrevImage);
+    
+    if (lightbox) {
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (lightbox && lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNextImage();
+        if (e.key === 'ArrowLeft') showPrevImage();
+      }
+    });
+
+    // Gallery Filter Tabs
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItemsFilter = document.querySelectorAll('.gallery-item, .gallery > *');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        galleryItemsFilter.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = '';
+            item.style.animation = 'fadeInUp 0.5s ease';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lazy Loading Images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src || img.src;
+          img.classList.add('loaded');
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offsetTop = target.offsetTop - 100;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
+          }
+        }
+      });
+    });
+
+    // Parallax Effect for Hero Video
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const heroVideo = document.querySelector('.bg-video');
+      if (heroVideo) {
+        heroVideo.style.transform = `translateY(${scrolled * 0.5}px) scale(1.1)`;
+      }
+    });
+
+    // Image Zoom on Hover for Gallery
+    document.querySelectorAll('.gallery img, .gallery-item img').forEach(img => {
+      img.addEventListener('mouseenter', function() {
+        this.style.transition = 'transform 0.5s ease';
+      });
+    });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const messageDiv = document.getElementById('formMessage');
+        if (messageDiv) {
+          messageDiv.style.display = 'block';
+          messageDiv.style.background = '#d4edda';
+          messageDiv.style.color = '#155724';
+          messageDiv.style.border = '1px solid #c3e6cb';
+          messageDiv.textContent = 'Thank you for your message! We will get back to you soon.';
+          this.reset();
+          
+          setTimeout(() => {
+            messageDiv.style.display = 'none';
+          }, 5000);
+        }
+      });
+    }
+
+    // Add animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.room-card, .service-card, .testimonial-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

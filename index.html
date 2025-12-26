@@ -1,0 +1,3040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hammamet Beach</title>
+  <link rel="icon" href="Logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Monsieur+La+Doulaise&display=swap');
+
+    :root {
+      
+      --ocean-teal: #2BAF9B;
+      --deep-sea: #166A8F;
+      --white-foam: #FFFFFF;
+      --blue-one: #2a7da5;
+      --blue-two: #3bace2;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    .pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--white-foam); /* header, menu item, and logo on white */
+      color: var(--deep-sea);
+      line-height: 1.6;
+    }
+
+    /* Hero header */
+    .hero-header {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white-foam);
+    }
+    
+    /* Gradient overlay for better text readability */
+    .hero-header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(22, 106, 143, 0.4) 0%, rgba(42, 125, 165, 0.3) 100%);
+      z-index: 0;
+    }
+    .hero-tagline {
+      animation: wave 1ms ease-in-out infinite;
+    }
+    @keyframes wave {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transform: scale(1.1); /* Parallax effect */
+      transition: transform 0.3s ease;
+    }
+    
+    .hero-header:hover .bg-video {
+      transform: scale(1.05);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+    
+    /* Fade-in animations */
+    .hero-content p:first-child {
+  transform: translateY(30px);
+}
+    
+    .hero-header h1 {
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+    
+    .hero-header p:last-of-type {
+      animation: fadeInUp 1s ease-out 0.6s both;
+      margin-top: 30px;
+    }
+    
+    .hero-cta {
+      animation: fadeInUp 1s ease-out 0.8s both;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-header h1 {
+      font-family: 'Cormorant', serif;
+      font-weight: 700;
+      font-size: 120px;
+      line-height: 1.1;
+      text-align: center;
+      letter-spacing: 3px;
+      margin-top: 40px;
+      margin-bottom: 0;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ffffff;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-header p:first-of-type {
+      letter-spacing: 2px;
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+    
+    .hero-header p:not(:first-of-type):not(.hero-tagline) {
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+    
+    .hero-header .hero-tagline {
+      margin-top: 40px;
+      margin-bottom: 0;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-family: 'Ramadesh Compact Oblique', sans-serif;
+    }
+    
+    /* CTA Button */
+    .hero-cta {
+      margin-top: 2rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, var(--ocean-teal) 0%, var(--blue-two) 100%);
+      color: var(--white-foam);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(43, 175, 155, 0.4);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .cta-button:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(43, 175, 155, 0.6);
+    }
+    
+    .cta-button span {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: bounce 2s infinite;
+    }
+    
+    .scroll-indicator i {
+      font-size: 2rem;
+      color: var(--white-foam);
+      opacity: 0.8;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+
+    section {
+      padding: 6rem 8%;
+    }
+    
+    /* Increased spacing for better breathing room */
+    .section-spacing {
+      margin-bottom: 4rem;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .intro h2 {
+      color: var(--ocean-teal);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* About Us Section */
+    .aboutus-section {
+      background: var(--white-foam);
+      padding: 100px 0;
+    }
+    
+    .about-text {
+      padding: 0 35px;
+      text-align: center;
+      font-family: "Cabin", sans-serif;
+    }
+    
+    .section-title {
+      text-align: center;
+    }
+    
+    .about-text p {
+      color: var(--deep-sea);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 0 15px 0;
+      font-family: "Cabin", sans-serif;
+    }
+    .image img {
+    width: 100%; 
+    max-width: 500px; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-left: 20px; /* smaller value moves it left */
+}
+
+    .about-text p.f-para {
+      margin-bottom: 10px;
+    }
+    
+    .about-text p.s-para {
+      margin-bottom: 35px;
+    }
+    
+    .section-title {
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    
+    .section-title span {
+      font-size: 14px;
+      color: #FFDDD2;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: "Cabin", sans-serif;
+    }
+    
+    .section-title h2 {
+      font-size: 44px;
+      color: var(--deep-sea);
+      line-height: 58px;
+      margin-top: 10px;
+      font-family: "Lora", serif;
+      font-weight: 400;
+    }
+    
+    .primary-btn {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--deep-sea);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      position: relative;
+      padding: 12px 30px;
+      background: transparent;
+      border: 2px solid var(--ocean-teal);
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-family: "Cabin", sans-serif;
+      overflow: hidden;
+    }
+    
+    .primary-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--ocean-teal) 0%, var(--blue-two) 100%);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .primary-btn:after {
+      display: none;
+    }
+
+    .primary-btn:hover {
+      color: var(--white-foam);
+      border-color: var(--ocean-teal);
+    }
+    
+    .primary-btn:hover::before {
+      left: 0;
+    }
+    
+    /* Ripple effect */
+    .primary-btn,
+    .cta-button {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+      transform: scale(0);
+      animation: ripple-animation 0.6s ease-out;
+      pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+    
+    .about-pic img {
+      width: 100%;
+      max-width: 260px;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+      justify-self: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--white-foam);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(22, 106, 143, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(22, 106, 143, 0.2);
+    }
+    
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card h3 {
+      color: #FFDDD2;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      cursor: pointer;
+    }
+    
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(22, 106, 143, 0.7) 0%, rgba(43, 175, 155, 0.7) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 18px;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .search-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 25px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .search-header h3 {
+      color: var(--deep-sea);
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    
+    .search-close {
+      font-size: 2rem;
+      color: var(--deep-sea);
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.3s;
+    }
+    
+    .search-close:hover {
+      color: var(--ocean-teal);
+    }
+    
+    .search-input-container {
+      position: relative;
+      padding: 20px 25px;
+    }
+    
+    .search-input-container input {
+      width: 100%;
+      padding: 12px 45px 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      color: var(--deep-sea);
+      transition: border-color 0.3s;
+    }
+    
+    .search-input-container input:focus {
+      outline: none;
+      border-color: var(--ocean-teal);
+    }
+    
+    .search-input-container i {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--ocean-teal);
+      pointer-events: none;
+    }
+    
+    .search-results {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0 25px 20px;
+      max-height: calc(70vh - 150px);
+    }
+    
+    .search-result-item {
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-left: 3px solid transparent;
+    }
+    
+    .search-result-item:hover {
+      background: #f5f5f5;
+      border-left-color: var(--ocean-teal);
+    }
+    
+    .search-result-item h4 {
+      color: var(--deep-sea);
+      margin: 0 0 5px 0;
+      font-size: 1.1rem;
+    }
+    
+    .search-result-item p {
+      color: #666;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    
+    .search-no-results {
+      padding: 40px 20px;
+      text-align: center;
+      color: #999;
+    }
+    
+    .search-result-item mark {
+      background: var(--ocean-teal);
+      color: var(--white-foam);
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    
+    .lightbox.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+    }
+    
+    .lightbox-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: var(--white-foam);
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    .lightbox-close:hover {
+      transform: rotate(90deg);
+    }
+
+    .lightbox-prev {
+      left: 20px;
+    }
+    
+    .lightbox-next {
+      right: 20px;
+    }
+
+    
+    .filter-btn {
+      padding: 10px 25px;
+      background: transparent;
+      border: 2px solid var(--ocean-teal);
+      color: var(--ocean-teal);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--ocean-teal);
+      color: var(--white-foam);
+    }
+    
+    /* Rooms Section */
+    .hp-room-section {
+      background: #FFFFFF;
+      padding: 100px 0;
+    }
+
+    .hp-room-items {
+      overflow: hidden;
+      
+    }
+
+    .hp-room-items .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 3rem;
+    }
+
+    .hp-room-items .hp-room-item {
+      height: 600px;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--deep-sea);
+    }
+
+    .hp-room-items .hp-room-item.set-bg {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hp-room-items .hp-room-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+      z-index: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .hp-room-items .hp-room-item:hover::before {
+      opacity: 0.9;
+    }
+
+    .hp-room-items .hp-room-item:hover .hr-text {
+      bottom: 135px;
+    }
+
+    .hp-room-items .hp-room-item:hover .hr-text h2 {
+      margin-bottom: 30px;
+    }
+
+    /* Room name - always visible */
+    .hp-room-items .hp-room-item .room-name {
+      position: absolute;
+      left: 45px;
+      right: 25px;
+      bottom: 30px;
+      z-index: 3;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .hp-room-items .hp-room-item .room-name h3 {
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    /* Hide room name on hover (will be shown in hr-text instead) */
+    .hp-room-items .hp-room-item:hover .room-name {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .hp-room-items .hp-room-item .hr-text {
+      position: absolute;
+      left: 45px;
+      right: 25px;
+      bottom: -250px;
+      z-index: 2;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    /* Hide features by default */
+    .hp-room-items .hp-room-item .hr-text .room-features {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, max-height 0.5s ease, margin-bottom 0.5s ease;
+    }
+
+    /* Show features on hover */
+    .hp-room-items .hp-room-item:hover .hr-text .room-features {
+      opacity: 1;
+      max-height: 500px;
+      margin-bottom: 30px;
+    }
+
+    .hp-room-items .hp-room-item .hr-text h3 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      font-size: 32px;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      letter-spacing: 1px;
+    }
+
+    .hp-room-items .hp-room-item .hr-text h2 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 50px;
+      font-size: 36px;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .hp-room-items .hp-room-item .hr-text h2 span {
+      font-family: "Cabin", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+
+    .hp-room-items .hp-room-item .hr-text .room-features {
+      list-style: none;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+
+    .hp-room-items .hp-room-item .hr-text .room-features li {
+      font-size: 16px;
+      color: #ffffff;
+      line-height: 36px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hp-room-items .hp-room-item .hr-text .room-features li i,
+    .hp-room-items .hp-room-item .hr-text .room-features li svg {
+      color: #ffffff;
+      margin-right: 12px;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .hp-room-items .hp-room-item .hr-text .primary-btn {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .hp-room-items .hp-room-item .hr-text .primary-btn:hover {
+      color: var(--deep-sea);
+      background: #ffffff;
+    }
+
+    .hp-room-items .hp-room-item .hr-text .primary-btn::before {
+      background: #ffffff;
+    }
+
+    @media (max-width: 1400px) {
+      .hp-room-items .rooms-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .hp-room-items .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hp-room-items .rooms-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hp-room-items .hp-room-item {
+        height: 500px;
+        margin-bottom: 2rem;
+      }
+      
+      .hp-room-items .hp-room-item .hr-text {
+        left: 25px;
+        right: 25px;
+      }
+      
+      .hp-room-items .hp-room-item .room-name {
+        left: 25px;
+        right: 25px;
+      }
+      
+      .hp-room-items .hp-room-item .room-name h3 {
+        font-size: 26px;
+      }
+    }
+    
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f8eff0;
+}
+
+/* Section spacing */
+.cards-section {
+  padding: 80px 20px;
+}
+
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  position: relative;
+  width: 280px;
+  height: 350px;
+}
+
+/* Tilt middle card */
+.card:nth-of-type(2) {
+  transform: rotate(5deg);
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: translate(10px, 10px);
+}
+
+
+/* Wavy filters */
+.card:nth-of-type(1)::before {
+  filter: url(#wavy1);
+}
+.container {
+  column-count: 3;
+  column-gap: 20px;
+}
+.card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+@media (max-width: 900px) {
+  .container { column-count: 1; }
+}
+
+.card:nth-of-type(2)::before {
+  filter: url(#wavy2);
+}
+
+.card:nth-of-type(3)::before {
+  filter: url(#wavy3);
+}
+.card:nth-of-type(4)::before {
+  filter: url(#wavy4);
+}
+
+/* Images */
+.image1 {
+  background-image: url("mousse/albumvendredi9.jpg");
+}
+
+.image2 {
+  background-image: url("mousse/albumvendredi7.jpg");
+}
+
+.image4 {
+  background-image: url("mousse/albumvendredi20.jpg");
+}
+.image4 {
+  background-image: url("mousse/albumvendredi8.jpg");
+}
+.image5 {
+  background-image: url("mousse/albumvendredi8.jpg");
+}
+
+.image6 {
+  background-image: url("Album Animation/albumanimation5.jpg");
+}
+.image7 {
+  background-image: url("Album Animation/albumanimation7.jpg");
+}
+.image8 {
+  background-image: url("Album Animation/albumanimation8.jpg");
+}
+.image9 {
+  background-image: url("mousse/albumvendredi12.jpg");
+}
+.image10 {
+  background-image: url("gastronomy/food1.png");
+  background-color: #f0f0f0;
+}
+.image11 {
+  background-image: url("gastronomy/food2.png");
+  background-color: #f0f0f0;
+}
+.image12 {
+  background-image: url("gastronomy/food3.png");
+  background-color: #f0f0f0;
+}
+.image13 {
+  background-image: url("");
+  background-color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+    /* Services Section */
+    .services-section {
+      padding: 4rem 8%;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .service-card {
+      background: var(--white-foam);
+      padding: 2rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(22, 106, 143, 0.12);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-icon {
+      font-size: 3rem;
+      color: var(--ocean-teal);
+      margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+      color: var(--deep-sea);
+      margin-bottom: 1rem;
+    }
+    
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 4rem 8%;
+      background: var(--white-foam);
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .testimonial-card {
+      background: var(--white-foam);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(22, 106, 143, 0.12);
+    }
+    
+    .stars {
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+    
+    .testimonial-card p {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: var(--deep-sea);
+    }
+    
+    .testimonial-author strong {
+      color: var(--deep-sea);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    .testimonial-author span {
+      color: var(--ocean-teal);
+      font-size: 0.9rem;
+    }
+    
+    /* Contact Section */
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-item i {
+      font-size: 1.5rem;
+      color: var(--ocean-teal);
+      margin-right: 1rem;
+      margin-top: 0.25rem;
+    }
+    
+    .contact-item h4 {
+      color: var(--deep-sea);
+      margin-bottom: 0.5rem;
+    }
+
+    
+    .map-container {
+      margin-top: 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .footer-social a {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: var(--deep-sea);
+      transition: color 0.3s;
+    }
+    
+    .footer-social a:hover {
+      color: var(--ocean-teal);
+    }
+
+    footer {
+      background: var(--white-foam);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--deep-sea);
+    }
+
+    /* Mobile Hamburger Menu */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1000;
+    }
+    
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--deep-sea);
+      margin: 3px 0;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    /* Image Lazy Loading */
+    img[loading="lazy"] {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    img[loading="lazy"].loaded {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .menu-item {
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        padding: 0 4%;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .menu-item-bottom .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white-foam);
+        box-shadow: 0 10px 30px rgba(22, 106, 143, 0.2);
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      .menu-item-bottom .nav-menu.active {
+        display: flex;
+      }
+      
+      .menu-item-bottom .nav-menu .mainmenu {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .menu-item-bottom .nav-menu .mainmenu li {
+        width: 100%;
+        margin: 10px 0;
+      }
+      
+      .menu-item-bottom .nav-menu .mainmenu li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid var(--white-foam);
+      }
+      
+      .sticky-book-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+      }
+      
+      .back-to-top {
+        bottom: 80px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+      }
+      
+      section {
+        padding: 3rem 5%;
+      }
+      
+      .aboutus-section > div > div {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .about-text {
+        text-align: center !important;
+        margin-bottom: 30px;
+        padding: 0 15px !important;
+      }
+      
+      .section-title {
+        text-align: center !important;
+      }
+      
+      .section-title h2 {
+        font-size: 30px !important;
+        line-height: 40px !important;
+      }
+      
+      .about-pic {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .about-pic img {
+        margin-bottom: 20px;
+      }
+    }
+
+    /*---------------------
+      Header / navbar
+    -----------------------*/
+
+    .header-section.header-normal .menu-item {
+      -webkit-box-shadow: 0px 12px 15px rgba(22,106,143,0.08);
+      box-shadow: 0px 12px 15px rgba(22,106,143,0.08);
+    }
+
+    /* Top nav styles now integrated into menu-item */
+
+    .menu-item-top .tn-left,
+    .menu-item-top .tn-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-item-top .tn-left ul,
+    .menu-item-top .tn-right ul {
+      list-style: none;
+    }
+
+    .menu-item-top .tn-left li {
+      list-style: none;
+      display: inline-block;
+      font-size: 16px;
+      color: #000000; 
+      font-weight: 500;
+      padding: 14px 0 12px;
+      margin-right: 64px;
+      position: relative;
+    }
+
+    .menu-item-top .tn-left li:after {
+      position: absolute;
+      right: -32px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: var(--white-foam);
+      content: "";
+    }
+
+    .menu-item-top .tn-left li:last-child {
+      margin-right: 0;
+    }
+
+    .menu-item-top .tn-left li:last-child:after {
+      display: none;
+    }
+
+    .menu-item-top .tn-left li i {
+      color: var(--ocean-teal);
+      margin-right: 4px;
+    }
+
+    .menu-item-top .tn-right {
+      text-align: right;
+    }
+
+    .menu-item-top .tn-right .top-social {
+      display: inline-block;
+      margin-right: 35px;
+      padding: 13px 0;
+    }
+
+    .menu-item-top .tn-right .top-social a {
+      display: inline-block;
+      font-size: 16px;
+      color: black;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    .menu-item-top .tn-right .top-social a:hover {
+      color: var(--ocean-teal);
+    }
+
+    .menu-item-top .tn-right .language-option {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 30px;
+      cursor: pointer;
+      padding: 13px 0px 11px;
+      position: relative;
+      gap: 8px;
+    }
+
+    .menu-item-top .tn-right .language-option:hover .flag-dropdown,
+    .menu-item-top .tn-right .language-option.active .flag-dropdown {
+      top: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-item-top .tn-right .language-option img {
+      height: 26px;
+      width: 26px;
+      min-width: 26px;
+      min-height: 26px;
+      border-radius: 50%;
+      margin-right: 0;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+      background: #f0f0f0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item-top .tn-right .language-option span {
+      font-size: 16px;
+      color: var(--deep-sea);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown {
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 100px;
+      background: var(--white-foam);
+      display: block;
+      padding: 10px 15px;
+      -webkit-box-shadow: 0px 9px 10px rgba(22,106,143,0.15);
+      box-shadow: 0px 9px 10px rgba(22,106,143,0.15);
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      z-index: 99;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown ul li {
+      list-style: none;
+      text-align: left;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown ul li a {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--deep-sea);
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .menu-item-top .tn-right .language-option .flag-dropdown ul li a:hover {
+      color: var(--ocean-teal);
+    }
+
+    .menu-item {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background: var(--white-foam); /* solid white to match logo */
+      border-radius: 0;
+      width: 100%;
+      box-shadow: 0 2px 20px rgba(22, 106, 143, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .menu-item.scrolled {
+      background: var(--white-foam);
+      box-shadow: 0 10px 40px rgba(22, 106, 143, 0.25);
+    }
+    
+    /* Active section indicator */
+    .menu-item .nav-menu .mainmenu li.active a {
+      color: var(--ocean-teal);
+      font-weight: 600;
+    }
+    
+    /* Sticky Book Now Button */
+    .sticky-book-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 998;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, var(--ocean-teal) 0%, var(--blue-two) 100%);
+      color: var(--white-foam);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(255, 127, 106, 0.4);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(100px);
+      pointer-events: none;
+    }
+    
+    .sticky-book-btn.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    
+    .sticky-book-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(255, 127, 106, 0.6);
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      z-index: 997;
+      width: 50px;
+      height: 50px;
+      background: var(--ocean-teal);
+      color: var(--white-foam);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(43, 175, 155, 0.3);
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      background: var(--deep-sea);
+      transform: translateY(-5px);
+    }
+    
+    .menu-item-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8%;
+      border-bottom: 1px solid var(--white-foam);
+    }
+    
+    .menu-item-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .menu-item .logo {
+      margin-left: 100px;
+    }
+    
+    .menu-item .logo img {
+      width: 120px;
+      height: 60px;
+      display: block;
+      object-fit: contain;
+      background: var(--white-foam);
+      padding: 3px;
+      border-radius: 2px;
+    }
+
+    .menu-item .logo a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #3382a8;
+      text-decoration: none;
+    }
+
+    .menu-item .nav-menu {
+      text-align: center;
+      width: 100%;
+    }
+
+    .menu-item .nav-menu .mainmenu {
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .menu-item .nav-menu .mainmenu li {
+      list-style: none;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-item .nav-menu .mainmenu li.active a:after {
+      opacity: 1;
+    }
+
+    .menu-item .nav-menu .mainmenu li:hover > a:after {
+      opacity: 1;
+    }
+
+    .menu-item .nav-menu .mainmenu li:hover .dropdown {
+      top: 77px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-item .nav-menu .mainmenu li a {
+      font-size: 16px;
+      color: var(--deep-sea);
+      margin-right: 42px;
+      font-weight: 500;
+      display: inline-block;
+      padding: 27px 0;
+      position: relative;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .menu-item .nav-menu .mainmenu li a:after {
+      position: absolute;
+      left: 0;
+      top: 52px;
+      width: 100%;
+      height: 2px;
+      background: #ffffff;
+      content: "";
+      opacity: 0;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown {
+      position: absolute;
+      left: 0;
+      top: 97px;
+      width: 180px;
+      background: var(--white-foam);
+      z-index: 9;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-box-shadow: 0px 9px 15px rgba(22,106,143,0.08);
+      box-shadow: 0px 9px 15px rgba(22,106,143,0.08);
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li {
+      list-style: none;
+      display: block;
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li a {
+      font-size: 16px;
+      color: var(--deep-sea);
+      display: block;
+      text-align: left;
+      padding: 8px 15px;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li a:hover {
+      color: var(--white-foam);
+    }
+
+    .menu-item .nav-menu .mainmenu li .dropdown li a:after {
+      display: none;
+    }
+
+    .menu-item .nav-menu .nav-right {
+      display: inline-block;
+      margin-left: 43px;
+      padding: 27px 0px;
+    }
+
+    .menu-item .nav-menu .nav-right i {
+      font-size: 16px;
+      color: var(--deep-sea);
+      cursor: pointer;
+    }
+
+    .canvas-open {
+      display: none;
+    }
+
+    .offcanvas-menu-wrapper {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Merged Top bar and Main menu -->
+  <div class="menu-item">
+    <!-- Top section with contact info and social -->
+    <div class="menu-item-top">
+      <div class="tn-left">
+        <ul>
+          <li><i class="fa fa-envelope"></i> contact@hammametbeach.com</li>
+        </ul>
+      </div>
+
+      <div class="tn-right">
+        <div class="top-social">
+          <a href="https://www.facebook.com/HotelHammametBeach" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          
+          <a href="https://www.instagram.com/hotel_hammamet_beach" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          
+          <a href="https://www.tiktok.com/@hammametbeach?_r=1&_t=ZM-92W8eC1OUeK" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          
+</div>     
+        <div class="language-option" id="languageSelector">
+          <img id="flagImg" src="flag.jpg" alt="">
+          <span id="currentLang">EN <i class="fa fa-angle-down"></i></span>
+          <div class="flag-dropdown">
+            <ul>
+              <li><a href="#" data-lang="en" class="lang-option">EN</a></li>
+              <li><a href="#" data-lang="fr" class="lang-option">FR</a></li>
+              <li><a href="#" data-lang="pl" class="lang-option">PL</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom section with navigation menu -->
+    <div class="menu-item-bottom">
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo"> 
+        <a href="#home">
+          <img src="Logo.png" alt="Hammamet Beach logo">
+        </a>
+      </div>
+      <div class="nav-menu">
+        <ul class="mainmenu">
+          <li class="active"><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#chambre" data-i18n="nav.rooms">Chambres</a></li>
+          <li>
+            <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+            <ul class="dropdown">
+              <li><a href="#mousse-gallery" data-i18n="nav.mousseGallery">Mousse Gallery</a></li>
+              <li><a href="#delicious-gastronomy" data-i18n="nav.gastronomy">Delicious Gastronomy</a></li>
+              <li><a href="#activities-fun" data-i18n="nav.activitiesFun">Activities & Fun</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero-header" id="home">
+    <video autoplay muted loop class="bg-video" poster="fallback-beach.jpg">
+      <source src="waves.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-content">
+      <p data-i18n="hero.welcome">Welcome To</p>
+      <h1>Hammamet Beach</h1>
+      <p data-i18n="hero.tagline">The place where, we create smiles.</p>
+      
+    </div>
+    <div class="scroll-indicator">
+      <a href="#about"><i class="fa fa-chevron-down"></i></a>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section class="aboutus-section" id="about">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 8%;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="about-text">
+          <div class="section-title">
+            <span data-i18n="about.label">About Us</span>
+            <h2>Hammamet Beach<br />Hotel & Resort</h2>
+          </div>
+          <p class="f-para" data-i18n="about.para1">Welcome to Hammamet Beach, a leading destination for travelers seeking the perfect beachside escape. We're passionate about creating unforgettable experiences. Every day, we welcome guests from around the world, offering exceptional hospitality across our beautiful coastal property.</p>
+          <p class="s-para" data-i18n="about.para2">So when it comes to booking the perfect hotel, vacation rental, resort, or beachfront accommodation, we've got you covered. Experience the warmth of the Mediterranean, the beauty of golden beaches, and the tranquility of gentle waves.</p>
+          <a href="#contact" class="primary-btn about-btn" data-i18n="about.readMore">Read more</a>
+        </div>
+        <div class="image" >
+          <br>
+          <br>
+          <img src="Hotel-2787-20210307-112905.jpg" alt="Hammamet Beach" style="width: 1000px; height: 400px;  object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Divider Section -->
+<div style="
+  width: 100vw;
+  height:80px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: #F8EBEB;
+  padding: 40px 0;
+">
+</div>
+
+<!-- Rooms Section -->
+<section class="hp-room-section" id="chambre">
+  <div class="container-fluid" style="width: 100%; padding: 0;">
+    <div class="section-title" style="max-width: 1500px; padding: 0%;">
+      <span data-i18n="rooms.discover">DISCOVER</span>
+      <h2 data-i18n="rooms.title">Our Rooms & Suites</h2>
+    </div>
+    <div class="hp-room-items" >
+      <div class="rooms-grid" id="rooms-grid">
+        <div class="hp-room-item set-bg" style="background-image: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop');">
+          <div class="room-name">
+            <h3 data-i18n="rooms.standard">Standard Room</h3>
+          </div>
+          <div class="hr-text">
+            <h3 data-i18n="rooms.standard">Standard Room</h3>
+            <ul class="room-features">
+              <li><i class="fa fa-snowflake"></i> <span data-i18n="rooms.ac">Air Conditioning</span></li>
+              <li><i class="fa fa-tv"></i> <span data-i18n="rooms.tv">Flat Screen TV</span></li>
+              <li><i class="fa fa-bed"></i> <span data-i18n="rooms.curtains">Blackout Curtains</span></li>
+              <li>
+                <svg viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" style="width: 20px; height: 20px; vertical-align: middle;">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <defs>
+                      <style>.cls-1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;stroke-width:1.91px;}</style>
+                    </defs>
+                    <rect class="cls-1" x="2.45" y="13.91" width="19.09" height="8.59"></rect>
+                    <line class="cls-1" x1="23.45" y1="13.91" x2="0.55" y2="13.91"></line>
+                    <line class="cls-1" x1="7.23" y1="13.91" x2="7.23" y2="22.5"></line>
+                    <line class="cls-1" x1="12" y1="13.91" x2="12" y2="22.5"></line>
+                    <line class="cls-1" x1="16.77" y1="13.91" x2="16.77" y2="22.5"></line>
+                    <path class="cls-1" d="M6.27,12V7.23A5.73,5.73,0,0,1,12,1.5h0a5.73,5.73,0,0,1,5.73,5.73V12"></path>
+                    <line class="cls-1" x1="6.27" y1="8.18" x2="18.68" y2="8.18"></line>
+                    <line class="cls-1" x1="12" y1="1.5" x2="12" y2="12"></line>
+                  </g>
+                </svg>
+                <span data-i18n="rooms.balcony">Private Balcony</span>
+              </li>
+            </ul>
+            <a href="#contact" class="primary-btn" data-i18n="rooms.moreDetails">More Details</a>
+          </div>
+        </div>
+        <div class="hp-room-item set-bg" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop');">
+          <div class="room-name">
+            <h3 data-i18n="rooms.standardPlus">Standard Plus Room</h3>
+          </div>
+          <div class="hr-text">
+            <h3 data-i18n="rooms.standardPlus">Standard Plus Room</h3>
+            <ul class="room-features">
+              <li><i class="fa fa-snowflake"></i> <span data-i18n="rooms.ac">Air Conditioning</span></li>
+              <li><i class="fa fa-tv"></i> <span data-i18n="rooms.tv">Flat Screen TV</span></li>
+              <li><i class="fa fa-bed"></i> <span data-i18n="rooms.curtains">Blackout Curtains</span></li>
+              <li><i class="fa fa-swimming-pool"></i> <span data-i18n="rooms.poolView">Pool View</span></li>
+            </ul>
+            <a href="#contact" class="primary-btn" data-i18n="rooms.moreDetails">More Details</a>
+          </div>
+        </div>
+        <div class="hp-room-item set-bg" style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop');">
+          <div class="room-name">
+            <h3 data-i18n="rooms.renovated">Renovated room</h3>
+          </div>
+          <div class="hr-text">
+            <h3 data-i18n="rooms.renovated">Renovated room</h3>
+            <ul class="room-features">
+              <li><i class="fa fa-wifi"></i> <span data-i18n="rooms.wifi">Free WiFi</span></li>
+              <li><i class="fa fa-snowflake"></i> <span data-i18n="rooms.ac">Air Conditioning</span></li>
+              <li><i class="fa fa-tv"></i> <span data-i18n="rooms.tv">Flat Screen TV</span></li>
+              <li><i class="fa fa-bed"></i> <span data-i18n="rooms.curtains">Blackout Curtains</span></li>
+            </ul>
+            <a href="#contact" class="primary-btn" data-i18n="rooms.moreDetails">More Details</a>
+          </div>
+        </div>
+        <div class="hp-room-item set-bg" style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop');">
+          <div class="room-name">
+            <h3 data-i18n="rooms.seaView">Renovated Sea View Room</h3>
+          </div>
+          <div class="hr-text">
+            <h3 data-i18n="rooms.seaView">Renovated Sea View Room</h3>
+            <ul class="room-features">
+              <li><i class="fa fa-wifi"></i> <span data-i18n="rooms.wifi">Free WiFi</span></li>
+              <li><i class="fa fa-snowflake"></i> <span data-i18n="rooms.ac">Air Conditioning</span></li>
+              <li><i class="fa fa-tv"></i> <span data-i18n="rooms.tv">Flat Screen TV</span></li>
+              <li><i class="fa fa-bed"></i> <span data-i18n="rooms.curtains">Blackout Curtains</span></li>
+              <li>
+                <svg fill="#ffffff" height="20px" width="20px" viewBox="0 0 512 512" stroke="#ffffff" stroke-width="12" style="filter: drop-shadow(0 0 3px rgba(255,255,255,0.9));">
+                  <path d="M363.342,71.578c-1.946-2.152-4.821-3.277-7.683-2.955c-1.92,0.192-47.687,4.964-99.789,26.96 
+                  c-69.781,29.464-116.995,76.035-136.544,134.673C76.469,358.83,9.027,370.205,7.942,370.37c-4.973,0.656-8.495,5.21-7.871,10.197 
+                  c0.576,4.625,4.518,8.009,9.058,8.009c0.379,0,0.763-0.022,1.147-0.072c3.219-0.402,79.401-11.477,126.396-152.463 
+                  C173.182,126.515,303.98,95.711,345.06,88.649l-6.598,32.991c-0.991,4.951,2.219,9.768,7.17,10.759 
+                  c4.96,0.991,9.772-2.223,10.759-7.17l9.143-45.714C366.105,76.671,365.288,73.725,363.342,71.578z"></path>
+                  <path d="M506.943,371.254c-101.763-50.879-68.705-189.36-68.267-191.168l9.143-45.714c0.571-2.844-0.245-5.79-2.192-7.937 
+                  c-1.946-2.147-4.83-3.259-7.683-2.955c-1.92,0.192-47.687,4.964-99.789,26.96c-69.781,29.464-116.995,76.035-136.544,134.673 
+                  C158.754,413.687,91.312,425.062,90.228,425.227c-4.973,0.656-8.495,5.21-7.87,10.196c0.576,4.625,4.518,8.009,9.058,8.009 
+                  c0.38,0,0.763-0.022,1.147-0.072c3.219-0.402,79.401-11.477,126.396-152.463C255.467,181.371,386.27,150.568,427.35,143.506 
+                  l-6.509,32.567c-0.384,1.536-37.018,154.066,77.924,211.538c4.536,2.263,10.013,0.429,12.268-4.089 
+                  C513.291,379.004,511.461,373.513,506.943,371.254z"></path>
+                </svg>
+                <span data-i18n="rooms.seaViewText">Sea View</span>
+              </li>
+            </ul>
+            <a href="#contact" class="primary-btn" data-i18n="rooms.moreDetails">More Details</a>
+          </div>
+        </div>
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slogan Section -->
+
+<section class="slogan-section">
+  <img src="slog.png" alt="Hammamet Beach" sizes="500px" width="500px" height="500px" style="display: block; margin: 0 auto;">
+</section>
+
+<section class="Gallery" style="background: var(--white-foam);">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+
+    <!-- First Set of Cards -->
+    <div class="cards-section" id="mousse-gallery" style="margin-top: 10px;">
+      <div class="cards-title" style="text-align: center; margin-bottom: 40px;">
+        <h2 data-i18n="gallery.mousse">Mousse Gallery</h2>
+        <p data-i18n="gallery.mousseDesc">Enjoy the best moments from our summer events and activities</p>
+      </div>
+
+      <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div class="card"><div class="image image1"></div></div>
+        <div class="card"><div class="image image2"></div></div>
+        <div class="card"><div class="image image4"></div></div>
+      </div>
+    </div>
+<!-- Divider Section -->
+<div style="
+  width: 100vw;
+  height:80px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: #F8EBEB;
+  padding: 40px 0;
+">
+</div>
+
+    <!-- Delicious Gastronomy Section -->
+    <div class="cards-section" id="delicious-gastronomy" style="margin-top: 80px;">
+      <div class="cards-title" style="text-align: center; margin-bottom: 40px;">
+        <h2 data-i18n="gallery.gastronomy">Delicious Gastronomy</h2>
+        <p data-i18n="gallery.gastronomyDesc">Savor exquisite Mediterranean flavors and culinary delights</p>
+      </div>
+
+      <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div class="card"><div class="image image10"></div></div>
+        <div class="card"><div class="image image11"></div></div>
+        <div class="card"><div class="image image12"></div></div>
+
+      </div>
+    </div>
+<!-- Divider Section -->
+<div style="
+  width: 100vw;
+  height: 80px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: #F8EBEB;
+  padding: 40px 0;
+">
+</div>
+
+    <!-- Second Set of Cards -->
+    <div class="cards-section" id="activities-fun" style="margin-top: 80px;">
+      <div class="cards-title" style="text-align: center; margin-bottom: 40px;">
+        <h2 data-i18n="gallery.activities">Activities & Fun</h2>
+        <p data-i18n="gallery.activitiesDesc">More amazing moments and activities for our guests</p>
+      </div>
+
+      <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div class="card"><div class="image image6"></div></div>
+        <div class="card"><div class="image image7"></div></div>
+        <div class="card"><div class="image image9"></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Divider Section -->
+<div style="
+  width: 100vw;
+  height:80px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: #F8EBEB;
+  padding: 40px 0;
+">
+
+<!-- Services Section -->
+<section class="services-section" style="background: var(--white-foam);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-title">
+      <span data-i18n="services.label">AMENITIES</span>
+      <h2 data-i18n="services.title">Hotel Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fa fa-cutlery service-icon"></i>
+        <h3 data-i18n="services.restaurant">Restaurant & Bar</h3>
+        <p data-i18n="services.restaurantDesc">Enjoy western and eastern Mediterranean cuisine and fresh seafood with stunning pool views.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-life-ring service-icon"></i>
+        <h3 data-i18n="services.beach">Private Beach</h3>
+        <p data-i18n="services.beachDesc">Exclusive access to pristine sandy beaches with complimentary sun loungers.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-tint service-icon"></i>
+        <h3 data-i18n="services.pool">Swimming Pool</h3>
+        <p data-i18n="services.poolDesc">Outdoor infinity pool with water slides and private pool for relaxation.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-spa service-icon"></i>
+        <h3 data-i18n="services.spa">Spa & Wellness</h3>
+        <p data-i18n="services.spaDesc">Rejuvenate with traditional hammam and massage treatments.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-wifi service-icon"></i>
+        <h3 data-i18n="services.wifi">Free WiFi</h3>
+        <p data-i18n="services.wifiDesc">High-speed internet access in the business center.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-car service-icon"></i>
+        <h3 data-i18n="services.parking">Free Parking</h3>
+        <p data-i18n="services.parkingDesc">Complimentary parking for all guests during their stay.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-table-tennis service-icon"></i>
+        <h3 data-i18n="services.tennis">Tennis Court</h3>
+        <p data-i18n="services.tennisDesc">Exclusive access to the tennis court for guests with a tennis racket.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-golf-ball service-icon"></i>
+        <h3 data-i18n="services.golf">Golf Course</h3>
+        <p data-i18n="services.golfDesc">Exclusive access to the golf course for guests with a golf club.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div class="section-title">
+      <span data-i18n="testimonials.label">REVIEWS</span>
+      <h2 data-i18n="testimonials.title">What Our Guests Say</h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>
+          "Nice hotel we go twice a year and we are very good. The staff and management are very professional.
+          Very satisfying room. The buffet varies greatly."
+        </p>
+        <strong>Aurélie C</strong><br>
+        <span>France</span>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>
+          "We had a great holiday at this hotel. The property is well located, very clean and perfectly appointed.
+          The structure with the slides has made our teenagers happy, and the pools and beach are impeccably maintained.
+          The restaurant is varied and of good quality."
+        </p>
+        <strong>Natalie D</strong><br>
+        <span>France</span>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>
+          "Stayed from 21 to 24-10-2025. We arrived as 43 people to celebrate our wedding and 60th anniversary.
+          Everything was perfectly organized so we could dine together.
+          A wonderful welcome from start to finish. Highly recommended."
+        </p>
+        <strong>Natalie D</strong><br>
+        <span>France</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Divider Section -->
+<div style="
+  width: 100vw;
+  height:80px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: #F8EBEB;
+  padding: 40px 0;
+">
+
+<!-- Contact Section -->
+<section id="contact" style="background: var(--white-foam);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-title">
+      <span data-i18n="contact.label">GET IN TOUCH</span>
+      <h2 data-i18n="contact.title">Contact Us</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+      <div class="contact-info" style="margin-top:70px;">
+        <div class="contact-item" >
+          <i class="fa fa-map-marker"></i>
+          <div>
+            <h4 data-i18n="contact.addressLabel">Address</h4>
+            <p>Mrezga, Hammamet 8050, Tunisia</p>
+          </div>
+        </div>
+      
+        <div class="contact-item">
+          <i class="fa fa-envelope"></i>
+          <div>
+            <h4 data-i18n="contact.emailLabel">Email</h4>
+            <p>contact@hammametbeach.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Hammamet+Beach,+Mrezga,+Hammamet+8050,+Tunisia&output=embed&zoom=19" width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="https://www.google.com/travel/search?ts=CAESCgoCCAMKAggDEAAaHBIaEhQKBwjqDxABGBISBwjqDxABGBMYATICEAAqBwoFOgNUTkQ&qs=CAEyE0Nnb0k5TjIzNmN6UHVyRUpFQUU4CEIJEal3mQViExn0QgkR5j-W5U4EC4Q&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls" target="_blank" class="primary-btn" style="display: inline-block; margin-top: 15px; width: 100%; text-align: center;">
+          <i class="fa fa-external-link" style="margin-right: 8px;"></i><span data-i18n="contact.googleTravel">View on Google Travel</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 0;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+      <div>
+        <h3 style="color: var(--ocean-teal); margin-bottom: 1rem;">Hammamet Beach</h3>
+        <p data-i18n="footer.description">Your perfect Mediterranean escape. Experience luxury, comfort, and the beauty of Tunisia's coastline.</p>
+      </div>
+      <div>
+        <h4 style="color: var(--ocean-teal); margin-bottom: 1rem;" data-i18n="footer.follow">
+          Follow Us
+        </h4>
+      
+        <div class="footer-social">
+          <a href="https://www.facebook.com/HotelHammametBeach"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+      
+          <a href="https://www.instagram.com/hotel_hammamet_beach"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+      
+          <a href="https://www.tiktok.com/@hammametbeach?_r=1&_t=ZM-92W8eC1OUeK"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--white-foam);">
+      © 2025 Hammamet Beach • Designed for relaxation and simplicity
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+
+
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-nav lightbox-prev">&#10094;</button>
+    <button class="lightbox-nav lightbox-next">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+ <script>
+    const searchIcon = document.getElementById('searchIcon');
+    const searchModal = document.getElementById('searchModal');
+    const searchClose = document.getElementById('searchClose');
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    
+    if (searchIcon) {
+      searchIcon.addEventListener('click', function() {
+        searchModal.classList.add('active');
+        searchInput.focus();
+        document.body.style.overflow = 'hidden';
+      });
+    }
+    
+    if (searchClose) {
+      searchClose.addEventListener('click', closeSearchModal);
+    }
+    
+    if (searchModal) {
+      searchModal.addEventListener('click', function(e) {
+        if (e.target === searchModal) {
+          closeSearchModal();
+        }
+      });
+    }
+    
+    function closeSearchModal() {
+      searchModal.classList.remove('active');
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+    
+    function searchTitles(query) {
+      if (!query || query.trim().length < 2) {
+        searchResults.innerHTML = '';
+        return;
+      }
+      
+      const searchTerm = query.toLowerCase().trim();
+      const results = [];
+      
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      
+      headings.forEach(heading => {
+        const text = heading.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+          let targetElement = heading;
+          let sectionId = null;
+          let sectionName = '';
+          
+          let parent = heading.parentElement;
+          while (parent && parent !== document.body) {
+            if (parent.id) {
+              sectionId = parent.id;
+              const sectionTitle = parent.querySelector('.section-title h2, h2');
+              if (sectionTitle) {
+                sectionName = sectionTitle.textContent;
+              }
+              break;
+            }
+            parent = parent.parentElement;
+          }
+          
+          if (!sectionId) {
+            const headingParent = heading.closest('section, div, article');
+            if (headingParent && headingParent.id) {
+              sectionId = headingParent.id;
+            }
+          }
+          
+          results.push({
+            title: heading.textContent,
+            element: heading,
+            sectionId: sectionId,
+            sectionName: sectionName || heading.textContent
+          });
+        }
+      });
+      
+      displaySearchResults(results, searchTerm);
+    }
+    
+    function displaySearchResults(results, searchTerm) {
+      if (results.length === 0) {
+        searchResults.innerHTML = '<div class="search-no-results">No results found for "' + searchTerm + '"</div>';
+        return;
+      }
+      
+      let html = '';
+      results.forEach((result, index) => {
+        html += `
+          <div class="search-result-item" data-index="${index}">
+            <h4>${highlightText(result.title, searchTerm)}</h4>
+            ${result.sectionName && result.sectionName !== result.title ? `<p>${result.sectionName}</p>` : ''}
+          </div>
+        `;
+      });
+      
+      searchResults.innerHTML = html;
+      
+      const resultItems = searchResults.querySelectorAll('.search-result-item');
+      resultItems.forEach((item, index) => {
+        item.addEventListener('click', function() {
+          const result = results[index];
+          scrollToResult(result);
+          closeSearchModal();
+        });
+      });
+    }
+    
+    function highlightText(text, searchTerm) {
+      const regex = new RegExp(`(${searchTerm})`, 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    }
+    
+    function scrollToResult(result) {
+      let targetElement = result.element;
+      
+      if (result.sectionId) {
+        const section = document.getElementById(result.sectionId);
+        if (section) {
+          targetElement = section;
+        }
+      }
+      
+      const offsetTop = targetElement.offsetTop - 100;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    
+
+    if (searchInput) {
+      let searchTimeout;
+      searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          searchTitles(this.value);
+        }, 300);
+      });
+      
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const firstResult = searchResults.querySelector('.search-result-item');
+          if (firstResult) {
+            firstResult.click();
+          }
+        }
+        if (e.key === 'Escape') {
+          closeSearchModal();
+        }
+      });
+    }
+    
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        if (!searchModal.classList.contains('active')) {
+          searchIcon.click();
+        }
+      }
+    });
+    
+
+    const translations = {
+      en: {
+        nav: {
+          home: "Home",
+          about: "About",
+          rooms: "Rooms",
+          gallery: "Gallery",
+          mousseGallery: "Mousse Gallery",
+          gastronomy: "Delicious Gastronomy",
+          activitiesFun: "Activities & Fun",
+          contact: "Contact"
+        },
+        hero: {
+          welcome: "Welcome To",
+          tagline: "The place where, we create smiles."
+        },
+        about: {
+          label: "About Us",
+          para1: "Welcome to Hammamet Beach, a leading destination for travelers seeking the perfect beachside escape. We're passionate about creating unforgettable experiences. Every day, we welcome guests from around the world, offering exceptional hospitality across our beautiful coastal property.",
+          para2: "So when it comes to booking the perfect hotel, vacation rental, resort, or beachfront accommodation, we've got you covered. Experience the warmth of the Mediterranean, the beauty of golden beaches, and the tranquility of gentle waves.",
+          readMore: "For more"
+        },
+        rooms: {
+          discover: "DISCOVER",
+          title: "Our Rooms & Suites",
+          standard: "Standard Room",
+          standardPlus: "Standard Plus Room",
+          renovated: "Renovated room",
+          seaView: "Renovated Sea View Room",
+          ac: "Air Conditioning",
+          tv: "Flat Screen TV",
+          curtains: "Blackout Curtains",
+          balcony: "Private Balcony",
+          poolView: "Pool View",
+          wifi: "Free WiFi",
+          seaViewText: "Sea View",
+          moreDetails: "More Details"
+        },
+        gallery: {
+          label: "Gallery",
+          title: "Summer Moments",
+          mousse: "Mousse Gallery",
+          mousseDesc: "Enjoy the best moments from our summer events and activities",
+          gastronomy: "Delicious Gastronomy",
+          gastronomyDesc: "Savor exquisite Mediterranean flavors and culinary delights",
+          activities: "Activities & Fun",
+          activitiesDesc: "More amazing moments and activities for our guests"
+        },
+        services: {
+          label: "AMENITIES",
+          title: "Hotel Services",
+          restaurant: "Restaurant & Bar",
+          restaurantDesc: "Enjoy western and eastern Mediterranean cuisine and fresh seafood with stunning pool views.",
+          beach: "Private Beach",
+          beachDesc: "Exclusive access to pristine sandy beaches with complimentary sun loungers.",
+          pool: "Swimming Pool",
+          poolDesc: "Outdoor infinity pool with water slides and private pool for relaxation.",
+          spa: "Spa & Wellness",
+          spaDesc: "Rejuvenate with traditional hammam and massage treatments.",
+          wifi: "Free WiFi",
+          wifiDesc: "High-speed internet access in the business center.",
+          parking: "Free Parking",
+          parkingDesc: "Complimentary parking for all guests during their stay.",
+          tennis: "Tennis Court",
+          tennisDesc: "Exclusive access to the tennis court for guests with a tennis racket.",
+          golf: "Golf Course",
+          golfDesc: "Exclusive access to the golf course for guests with a golf club."
+        },
+        testimonials: {
+          label: "REVIEWS",
+          title: "What Our Guests Say"
+        },
+        contact: {
+          label: "GET IN TOUCH",
+          title: "Contact Us",
+          addressLabel: "Address",
+          emailLabel: "Email",
+          googleTravel: "View on Google Travel"
+        },
+        footer: {
+          description: "Your perfect Mediterranean escape. Experience luxury, comfort, and the beauty of Tunisia's coastline.",
+          follow: "Follow Us"
+        }
+      },
+      fr: {
+        nav: {
+          home: "Accueil",
+          about: "À propos",
+          rooms: "Chambres",
+          gallery: "Galerie",
+          mousseGallery: "Galerie Mousse",
+          gastronomy: "Gastronomie Délicieuse",
+          activitiesFun: "Activités et Divertissements",
+          contact: "Contact"
+        },
+        hero: {
+          welcome: "Bienvenue à",
+          tagline: "L'endroit où nous créons des sourires."
+        },
+        about: {
+          label: "À propos de nous",
+          para1: "Bienvenue à Hammamet Beach, une destination de premier plan pour les voyageurs en quête d'une évasion parfaite au bord de la mer. Nous sommes passionnés par la création d'expériences inoubliables. Chaque jour, nous accueillons des invités du monde entier, offrant une hospitalité exceptionnelle dans notre magnifique propriété côtière.",
+          para2: "Alors, quand il s'agit de réserver l'hôtel parfait, la location de vacances, le resort ou l'hébergement en bord de mer, nous avons ce qu'il vous faut. Découvrez la chaleur de la Méditerranée, la beauté des plages dorées et la tranquillité des vagues douces.",
+          readMore: "Pour plus d'infos"
+        },
+        rooms: {
+          discover: "DÉCOUVRIR",
+          title: "Nos Chambres et Suites",
+          standard: "Chambre Standard",
+          standardPlus: "Chambre Standard Plus",
+          renovated: "Chambre rénovée",
+          seaView: "Chambre rénovée avec vue sur mer",
+          ac: "Climatisation",
+          tv: "TV écran plat",
+          curtains: "Rideaux occultants",
+          balcony: "Balcon privé",
+          poolView: "Vue sur la piscine",
+          wifi: "WiFi gratuit",
+          seaViewText: "Vue sur mer",
+          moreDetails: "Plus de détails"
+        },
+        gallery: {
+          label: "Galerie",
+          title: "Moments d'été",
+          mousse: "Galerie Mousse",
+          mousseDesc: "Profitez des meilleurs moments de nos événements et activités estivaux",
+          gastronomy: "Gastronomie Délicieuse",
+          gastronomyDesc: "Savourez des saveurs méditerranéennes exquises et des délices culinaires",
+          activities: "Activités et Divertissements",
+          activitiesDesc: "Encore plus de moments et d'activités incroyables pour nos invités"
+        },
+        services: {
+          label: "ÉQUIPEMENTS",
+          title: "Services de l'hôtel",
+          restaurant: "Restaurant et Bar",
+          restaurantDesc: "Dégustez une cuisine méditerranéenne occidentale et orientale et des fruits de mer frais avec une vue imprenable sur la piscine.",
+          beach: "Plage privée",
+          beachDesc: "Accès exclusif à des plages de sable immaculées avec des transats gratuits.",
+          pool: "Piscine",
+          poolDesc: "Piscine à débordement extérieure avec toboggans aquatiques et piscine privée pour la détente.",
+          spa: "Spa et Bien-être",
+          spaDesc: "Régénérez-vous avec des traitements de hammam traditionnel et de massage.",
+          wifi: "WiFi gratuit",
+          wifiDesc: "Accès Internet haut débit dans le centre d'affaires.",
+          parking: "Parking gratuit",
+          parkingDesc: "Parking gratuit pour tous les invités pendant leur séjour.",
+          tennis: "Court de tennis",
+          tennisDesc: "Accès exclusif au court de tennis pour les invités avec une raquette de tennis.",
+          golf: "Terrain de golf",
+          golfDesc: "Accès exclusif au terrain de golf pour les invités avec un club de golf."
+        },
+        testimonials: {
+          label: "AVIS",
+          title: "Ce que disent nos invités"
+        },
+        contact: {
+          label: "NOUS CONTACTER",
+          title: "Contactez-nous",
+          addressLabel: "Adresse",
+          emailLabel: "Email",
+          googleTravel: "Voir sur Google Travel"
+        },
+        footer: {
+          description: "Votre évasion méditerranéenne parfaite. Découvrez le luxe, le confort et la beauté du littoral tunisien.",
+          follow: "Suivez-nous"
+        }
+      },
+      pl: {
+        nav: {
+          home: "Strona główna",
+          about: "O nas",
+          rooms: "Pokoje",
+          gallery: "Galeria",
+          mousseGallery: "Galeria Mousse",
+          gastronomy: "Pyszna Gastronomia",
+          activitiesFun: "Zabawy i Atrakcje",
+          contact: "Kontakt"
+        },
+        hero: {
+          welcome: "Witamy w",
+          tagline: "Miejsce, w którym tworzymy uśmiechy."
+        },
+        about: {
+          label: "O nas",
+          para1: "Witamy w Hammamet Beach, wiodącym miejscu dla podróżników poszukujących idealnej ucieczki nad morzem. Pasjonujemy się tworzeniem niezapomnianych doświadczeń. Każdego dnia witamy gości z całego świata, oferując wyjątkową gościnność w naszej pięknej nadmorskiej posiadłości.",
+          para2: "Więc jeśli chodzi o rezerwację idealnego hotelu, wynajem wakacyjny, resort lub zakwaterowanie nad morzem, mamy to dla Ciebie. Doświadcz ciepła Morza Śródziemnego, piękna złotych plaż i spokoju łagodnych fal.",
+          readMore: "Czytaj więcej"
+        },
+        rooms: {
+          discover: "ODKRYJ",
+          title: "Nasze Pokoje i Apartamenty",
+          standard: "Pokój Standardowy",
+          standardPlus: "Pokój Standard Plus",
+          renovated: "Odnowiony pokój",
+          seaView: "Odnowiony pokój z widokiem na morze",
+          ac: "Klimatyzacja",
+          tv: "Telewizor płaski",
+          curtains: "Zasłony zaciemniające",
+          balcony: "Prywatny balkon",
+          poolView: "Widok na basen",
+          wifi: "Darmowe WiFi",
+          seaViewText: "Widok na morze",
+          moreDetails: "Więcej szczegółów"
+        },
+        gallery: {
+          label: "Galeria",
+          title: "Letnie chwile",
+          mousse: "Galeria Mousse",
+          mousseDesc: "Ciesz się najlepszymi chwilami z naszych letnich wydarzeń i aktywności",
+          gastronomy: "Pyszna Gastronomia",
+          gastronomyDesc: "Rozkoszuj się wykwintnymi smakami śródziemnomorskimi i kulinarnymi przysmakami",
+          activities: "Zabawy i Atrakcje",
+          activitiesDesc: "Więcej niesamowitych chwil i aktywności dla naszych gości"
+        },
+        services: {
+          label: "UDOGODNIENIA",
+          title: "Usługi hotelowe",
+          restaurant: "Restauracja i Bar",
+          restaurantDesc: "Ciesz się kuchnią zachodnią i wschodnią śródziemnomorską oraz świeżymi owocami morza z oszałamiającym widokiem na basen.",
+          beach: "Prywatna plaża",
+          beachDesc: "Ekskluzywny dostęp do nieskazitelnych piaszczystych plaż z bezpłatnymi leżakami.",
+          pool: "Basen",
+          poolDesc: "Zewnętrzny basen infinity z zjeżdżalniami wodnymi i prywatnym basenem do relaksu.",
+          spa: "Spa i Wellness",
+          spaDesc: "Odmładzaj się tradycyjnymi zabiegami hammam i masażami.",
+          wifi: "Darmowe WiFi",
+          wifiDesc: "Szybki dostęp do internetu w centrum biznesowym.",
+          parking: "Darmowy parking",
+          parkingDesc: "Bezpłatny parking dla wszystkich gości podczas pobytu.",
+          tennis: "Kort tenisowy",
+          tennisDesc: "Ekskluzywny dostęp do kortu tenisowego dla gości z rakietą tenisową.",
+          golf: "Pole golfowe",
+          golfDesc: "Ekskluzywny dostęp do pola golfowego dla gości z kijem golfowym."
+        },
+        testimonials: {
+          label: "OPINIE",
+          title: "Co mówią nasi goście"
+        },
+        contact: {
+          label: "SKONTAKTUJ SIĘ",
+          title: "Skontaktuj się z nami",
+          addressLabel: "Adres",
+          emailLabel: "Email",
+          googleTravel: "Zobacz w Google Travel"
+        },
+        footer: {
+          description: "Twoja idealna ucieczka na Morze Śródziemne. Doświadcz luksusu, komfortu i piękna tunezyjskiego wybrzeża.",
+          follow: "Śledź nas"
+        }
+      }
+    };
+
+    const languageFlags = {
+      en: 'flag.jpg', 
+      fr: 'https://flagcdn.com/w40/fr.png', 
+      pl: 'https://flagcdn.com/w40/pl.png'
+    };
+
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+
+    function updateLanguage(lang) {
+      currentLanguage = lang;
+      localStorage.setItem('selectedLanguage', lang);
+      
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let translation = translations[lang];
+        
+        for (let k of keys) {
+          translation = translation[k];
+        }
+        
+        if (translation) {
+          element.textContent = translation;
+        }
+      });
+
+      const langSpan = document.getElementById('currentLang');
+      const flagImg = document.getElementById('flagImg');
+      
+      if (langSpan) {
+        langSpan.innerHTML = lang.toUpperCase() + ' <i class="fa fa-angle-down"></i>';
+      }
+      
+      if (flagImg && languageFlags[lang]) {
+        flagImg.src = languageFlags[lang];
+        flagImg.alt = lang.toUpperCase();
+        flagImg.onload = function() {
+          this.style.display = 'block';
+        };
+        flagImg.onerror = function() {
+          console.warn('Flag image failed to load for language:', lang);
+        };
+      }
+
+      document.documentElement.lang = lang;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateLanguage(currentLanguage);
+
+      document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+          e.preventDefault();
+          const lang = this.getAttribute('data-lang');
+          updateLanguage(lang);
+          
+          const dropdown = document.querySelector('.flag-dropdown');
+          if (dropdown) {
+            dropdown.style.opacity = '0';
+            dropdown.style.visibility = 'hidden';
+          }
+        });
+      });
+
+      const languageOption = document.getElementById('languageSelector');
+      if (languageOption) {
+        const dropdown = languageOption.querySelector('.flag-dropdown');
+        
+        languageOption.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (dropdown) {
+            const isActive = languageOption.classList.contains('active');
+            if (isActive) {
+              languageOption.classList.remove('active');
+              dropdown.style.top = '60px';
+              dropdown.style.opacity = '0';
+              dropdown.style.visibility = 'hidden';
+            } else {
+              languageOption.classList.add('active');
+              dropdown.style.top = '40px';
+              dropdown.style.opacity = '1';
+              dropdown.style.visibility = 'visible';
+            }
+          }
+        });
+
+        languageOption.addEventListener('mouseenter', function() {
+          if (dropdown) {
+            dropdown.style.top = '40px';
+            dropdown.style.opacity = '1';
+            dropdown.style.visibility = 'visible';
+            languageOption.classList.add('active');
+          }
+        });
+
+        languageOption.addEventListener('mouseleave', function() {
+          if (dropdown) {
+            dropdown.style.top = '60px';
+            dropdown.style.opacity = '0';
+            dropdown.style.visibility = 'hidden';
+            languageOption.classList.remove('active');
+          }
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!languageOption.contains(e.target)) {
+            languageOption.classList.remove('active');
+            if (dropdown) {
+              dropdown.style.top = '60px';
+              dropdown.style.opacity = '0';
+              dropdown.style.visibility = 'hidden';
+            }
+          }
+        });
+      }
+    });
+
+    window.addEventListener('scroll', function() {
+      const menuItem = document.querySelector('.menu-item');
+      if (window.scrollY > 100) {
+        menuItem.classList.add('scrolled');
+      } else {
+        menuItem.classList.remove('scrolled');
+      }
+    });
+
+    const stickyBtn = document.querySelector('.sticky-book-btn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        stickyBtn.classList.add('visible');
+      } else {
+        stickyBtn.classList.remove('visible');
+      }
+    });
+
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.menu-item-bottom .nav-menu');
+    
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+    }
+
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-menu .mainmenu li a');
+    
+    window.addEventListener('scroll', function() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.parentElement.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    });
+
+    document.querySelectorAll('.primary-btn, .cta-button, .sticky-book-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    const galleryItems = document.querySelectorAll('.gallery-item img, .gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    
+    let currentImageIndex = 0;
+    const images = Array.from(galleryItems);
+
+    galleryItems.forEach((img, index) => {
+      const galleryItem = img.closest('.gallery-item') || img.parentElement;
+      if (!galleryItem.querySelector('.gallery-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'gallery-overlay';
+        overlay.innerHTML = '<i class="fa fa-search-plus"></i>';
+        galleryItem.appendChild(overlay);
+      }
+      
+      galleryItem.style.cursor = 'pointer';
+      galleryItem.addEventListener('click', function() {
+        currentImageIndex = index;
+        openLightbox(img.src);
+      });
+    });
+
+    function openLightbox(src) {
+      if (lightboxImg && lightbox) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox() {
+      if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function showNextImage() {
+      if (images.length > 0) {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        if (lightboxImg) lightboxImg.src = images[currentImageIndex].src;
+      }
+    }
+
+    function showPrevImage() {
+      if (images.length > 0) {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        if (lightboxImg) lightboxImg.src = images[currentImageIndex].src;
+      }
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxNext) lightboxNext.addEventListener('click', showNextImage);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', showPrevImage);
+    
+    if (lightbox) {
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (lightbox && lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNextImage();
+        if (e.key === 'ArrowLeft') showPrevImage();
+      }
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItemsFilter = document.querySelectorAll('.gallery-item, .gallery > *');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        galleryItemsFilter.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = '';
+            item.style.animation = 'fadeInUp 0.5s ease';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lazy Loading Images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src || img.src;
+          img.classList.add('loaded');
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        
+        if (target) {
+          let scrollPosition;
+          
+          if (href === '#chambre') {
+            const roomsGrid = document.getElementById('rooms-grid');
+            if (roomsGrid) {
+              const gridRect = roomsGrid.getBoundingClientRect();
+              const gridTop = gridRect.top + window.pageYOffset;
+              const gridHeight = gridRect.height;
+              const viewportHeight = window.innerHeight;
+              
+              scrollPosition = gridTop + (gridHeight / 2) - (viewportHeight / 2) - 80;
+              
+              const sectionTop = target.offsetTop - 100;
+              scrollPosition = Math.max(scrollPosition, sectionTop);
+            } else {
+              scrollPosition = target.offsetTop - 100;
+            }
+          } else if (href === '#about') {
+            scrollPosition = target.offsetTop - 60;
+          } else {
+            scrollPosition = target.offsetTop - 100;
+          }
+          
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth'
+          });
+          
+          if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
+          }
+        }
+      });
+    });
+
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const heroVideo = document.querySelector('.bg-video');
+      if (heroVideo) {
+        heroVideo.style.transform = `translateY(${scrolled * 0.5}px) scale(1.1)`;
+      }
+    });
+
+    document.querySelectorAll('.gallery img, .gallery-item img').forEach(img => {
+      img.addEventListener('mouseenter', function() {
+        this.style.transition = 'transform 0.5s ease';
+      });
+    });
+
+    
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.room-card, .service-card, .testimonial-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script> 
+
+</body>
+</html>
